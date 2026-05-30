@@ -32,8 +32,13 @@ This analytical application processes real-time behavioral data, socio-economic 
 <a id="-dashboard-preview"></a>
 ## 🖼️ Dashboard Preview
 
+### 1.Overview
 * ![Overview](screenshots/fintech_overview.JPG)
+
+### 2.Customer Analysis
 * ![Customer Analysis](screenshots/fintech_customer_analysis.JPG)
+
+### 3.Financial Analysis
 * ![Financial Analysis](screenshots/financial_analysis.JPG)
 
 ---
