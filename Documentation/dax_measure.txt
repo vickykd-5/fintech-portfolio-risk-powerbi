@@ -1,0 +1,102 @@
+=====================================================DAX MEASURES===============================================
+[MEASURE 01] Portfolio Total Transaction Volume
+
+--------------------------------------------------------------------------------
+
+Formula:
+
+Total Transaction Volume = SUM('Fact_BNPL_Loans'[purchase_amount])
+
+
+Business & Technical Rationale:
+
+Acts as the baseline monetary metric representing the gross volume of consumer
+credit routed through the platform. This measure forms the basis for yield calculations, 
+market share tracking, and overall portfolio scaling analysis.
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+[MEASURE 02] Systemic Portfolio Default Rate (%)
+
+--------------------------------------------------------------------------------
+
+Formula:
+
+Portfolio Default Rate = 
+DIVIDE(
+    CALCULATE(COUNT('Fact_BNPL_Loans'[user_id]), 'Fact_BNPL_Loans'[default_flag] = 1),
+    COUNT('Fact_BNPL_Loans'[user_id]),
+    0
+)
+
+
+Business & Technical Rationale:
+
+The primary metric used to evaluate portfolio health. It tracks the ratio of bad debt 
+accounts relative to the entire customer pool. Utilizing the DIVIDE function ensures 
+built-in zero-denominator handling to prevent interface rendering errors.
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+[MEASURE 03] Average Risk Score Calibration
+
+--------------------------------------------------------------------------------
+
+Formula:
+
+Average Risk Score = AVERAGE('Fact_BNPL_Loans'[risk_score])
+
+
+Business & Technical Rationale:
+
+Establishes a running benchmark for portfolio risk concentrations. Tracking fluctuations 
+in this metric serves as an early warning indicator, allowing credit managers to detect 
+macro shifts in portfolio quality before defaults occur.
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+[MEASURE 04] Total Missed Payment Incidents
+--------------------------------------------------------------------------------
+
+Formula:
+Total Missed Payments = SUM('Fact_BNPL_Loans'[missed_payments])
+
+
+Business & Technical Rationale:
+
+Aggregates total contract violations across the platform. This metric is critical for 
+operational collection planning and helps optimize customer outreach strategies.
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+[MEASURE 05] Average Repayment Delay (Days)
+--------------------------------------------------------------------------------
+
+Formula:
+
+Avg Repayment Delay Days = AVERAGE('Fact_BNPL_Loans'[repayment_delay_days])
+
+
+Business & Technical Rationale:
+
+Measures the operational latency of cash inflows. Increases in this average suggest 
+growing delinquency trends, prompting a need to tighten front-end automated credit 
+checks.
+
+================================================================================
