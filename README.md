@@ -145,8 +145,8 @@ The automated Power Query pipeline enforces corporate data-governance standards 
 
 📧 Email: vivekkdeore001@gmail.com
 
-🔗 LinkedIn: https://linkedin.com/in/your-profile
+🔗 LinkedIn: https://linkedin.com/in/vivekkdeore
 
-🔗 GitHub: https://github.com/yourusername
+🔗 GitHub: https://github.com/vickykd-5
 
 `#powerbi-dashboard` `#fintech-analytics` `#credit-risk-analysis` `#data-modeling` `#dax-measures` `#powerquery-etl` `#business-intelligence` `#portfolio-management`
